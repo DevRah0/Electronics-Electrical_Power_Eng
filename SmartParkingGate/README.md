@@ -44,7 +44,7 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 
 | Component | Arduino Pin |
 |-----------|-------------|
-| Servo Motor | D9 | (Shared Signal) x 4
+| Servo Motor | D9  (Shared Signal) x 4 |
 | HC-SR04 Trigger | D7 |
 | HC-SR04 Echo | D6 |
 | RGB LED (Red) | D2 |

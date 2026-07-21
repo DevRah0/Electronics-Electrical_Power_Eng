@@ -30,7 +30,7 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 
 - Arduino Uno
 - HC-SR04 Ultrasonic Sensor
-- Servo Motor
+- 4 x Servo Motor
 - LCD 16×2 I2C Display
 - RGB LED (Common Cathode)
 - Piezo Buzzer
@@ -44,7 +44,7 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 
 | Component | Arduino Pin |
 |-----------|-------------|
-| Servo Motor | D9 |
+| Servo Motor | D9 | (Shared Signal) x 4
 | HC-SR04 Trigger | D7 |
 | HC-SR04 Echo | D6 |
 | RGB LED (Red) | D2 |
@@ -53,6 +53,9 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 | LCD SDA | A4 |
 | LCD SCL | A5 |
 
+> **Note:** All four servo motors share the same control signal (D9), power (5V), and ground (GND). As a result, they move simultaneously without requiring any modifications to the Arduino code.
+
+> **ملاحظة:** جميع محركات السيرفو الأربعة تشترك في نفس إشارة التحكم (D9) بالإضافة إلى مصدر الطاقة (5V) والأرضي (GND)، لذلك تتحرك في الوقت نفسه دون الحاجة إلى أي تعديل في كود Arduino.
 ---
 
 ## ⚙️ How It Works | آلية العمل
@@ -61,19 +64,19 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 
    > يقيس حساس الموجات فوق الصوتية المسافة بشكل مستمر.
 
-2. When an object is detected within the predefined distance, the servo motor automatically opens the gate.
+2. When an object is detected within the predefined distance, the shared control signal activates all four servo motors simultaneously, opening the gate automatically.
 
-   > عند اكتشاف جسم ضمن المسافة المحددة، يفتح محرك السيرفو البوابة تلقائيًا.
+   > عند اكتشاف جسم ضمن المسافة المحددة، تقوم إشارة التحكم المشتركة بتشغيل محركات السيرفو الأربعة في الوقت نفسه، مما يؤدي إلى فتح البوابة تلقائيًا.
 
 3. The RGB LED turns **green**, the buzzer sounds, and the LCD displays **"Gate Open"**.
 
    > يتحول مصباح **RGB LED** إلى اللون الأخضر، ويصدر البازر تنبيهًا، وتعرض شاشة **LCD** الرسالة **"Gate Open"**.
 
-4. When the object leaves the detection range, the servo motor closes the gate, the RGB LED turns **red**, and the LCD displays **"Gate Closed"**.
+4. When the object leaves the detection range, all four servo motors return to their initial position simultaneously, closing the gate while the RGB LED turns red and the LCD displays **"Gate Closed"**.
 
-   > عند مغادرة الجسم لمنطقة الكشف، يغلق محرك السيرفو البوابة، ويتحول مصباح **RGB LED** إلى اللون الأحمر، وتعرض شاشة **LCD** الرسالة **"Gate Closed"**.
+   > عند مغادرة الجسم لمنطقة الكشف، تعود محركات السيرفو الأربعة إلى وضعها الابتدائي في الوقت نفسه لإغلاق البوابة، ويتحول مصباح **RGB LED** إلى اللون الأحمر، وتعرض شاشة **LCD** الرسالة **"Gate Closed"**.
 
----
+   ---
 
 ## 📂 Project Files | ملفات المشروع
 

@@ -85,6 +85,19 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 ![Circuit](Smart%20Parking%20Gate.png)
 
 ---
+## 🎥 Project Demo | عرض المشروع
+
+Watch the project demonstration here:
+
+🔗 **Demo Video:** https://github.com/DevRah0/Electronics-Electrical_Power_Eng/discussions/1#discussioncomment-17717451
+
+This video demonstrates the complete operation of the Smart Parking Gate, including vehicle detection, automatic gate control, LCD status updates, RGB LED indicators, and buzzer notifications.
+
+شاهد العرض العملي للمشروع من خلال الرابط التالي:
+
+🔗 **فيديو المشروع:** https://github.com/DevRah0/Ai-and-Robotics/discussions/2#discussioncomment-17717391
+
+يوضح الفيديو آلية عمل المشروع بالكامل، بما في ذلك اكتشاف المركبات، وفتح وإغلاق البوابة تلقائيًا، وتحديث شاشة LCD، وإشارات LED RGB، والتنبيه الصوتي باستخدام البازر.
 
 ## 💻 Development Platform | بيئة التطوير
 

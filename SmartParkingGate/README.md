@@ -57,17 +57,21 @@ The Smart Parking Gate is an Arduino-based project that automates the opening an
 
 ## ⚙️ How It Works | آلية العمل
 
-1. The ultrasonic sensor continuously measures the distance.  
-   يقيس الحساس المسافة بشكل مستمر.
+1. The ultrasonic sensor continuously measures the distance.
 
-2. When an object is detected within the predefined distance, the servo motor opens the gate automatically.  
-   عند اكتشاف جسم ضمن المسافة المحددة، يقوم السيرفو بفتح البوابة تلقائيًا.
+   > يقيس حساس الموجات فوق الصوتية المسافة بشكل مستمر.
 
-3. The RGB LED changes to **green**, the buzzer sounds, and the LCD displays **"Gate Open"**.  
-   يتحول LED RGB إلى اللون الأخضر، ويصدر البازر تنبيهًا، وتعرض الشاشة رسالة **"Gate Open"**.
+2. When an object is detected within the predefined distance, the servo motor automatically opens the gate.
 
-4. When the object moves away, the servo closes the gate, the RGB LED changes to **red**, and the LCD displays **"Gate Closed"**.  
-   عند ابتعاد الجسم، يغلق السيرفو البوابة، ويتحول LED RGB إلى اللون الأحمر، وتعرض الشاشة رسالة **"Gate Closed"**.
+   > عند اكتشاف جسم ضمن المسافة المحددة، يفتح محرك السيرفو البوابة تلقائيًا.
+
+3. The RGB LED turns **green**, the buzzer sounds, and the LCD displays **"Gate Open"**.
+
+   > يتحول مصباح **RGB LED** إلى اللون الأخضر، ويصدر البازر تنبيهًا، وتعرض شاشة **LCD** الرسالة **"Gate Open"**.
+
+4. When the object leaves the detection range, the servo motor closes the gate, the RGB LED turns **red**, and the LCD displays **"Gate Closed"**.
+
+   > عند مغادرة الجسم لمنطقة الكشف، يغلق محرك السيرفو البوابة، ويتحول مصباح **RGB LED** إلى اللون الأحمر، وتعرض شاشة **LCD** الرسالة **"Gate Closed"**.
 
 ---
 
